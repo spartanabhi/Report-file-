@@ -1,0 +1,36 @@
+# Report-file-
+Saving info in a txt file through thonny 
+import math
+y = open("Siera.txt " , "w")
+y.write("WELCOME TO REPORT CARD DIRECTORY ")
+i = int(input("How many records you wanna enter  : "))
+for j in range(i) :
+    name = input("Name of the Student : ")
+    rno = int(input("Enter the roll no : "))
+    eng = int(input("English : "))
+    hind = int(input("Hind : "))
+    sst = int(input("Social science : "))
+    y.write("\n*******************************************************************************")
+    y.write("\nName of the student : ")
+    y.write(name)
+    y.write("\nRoll no : ")
+    y.write(str(rno))
+    y.write("\n##Marks scored ; subject wise## ")
+    y.write("\nEnglish : ")
+    y.write(str(eng))
+    y.write("\nHindi : ")
+    y.write(str(hind))
+    y.write("\nSocial Science : ")
+    y.write(str(sst))
+    s = (eng+hind+sst)
+    y.write("\nTotal Marks : ")
+    y.write(str(s))
+    y.write("\nAverage Marks : ")
+    y.write(str(round(s/3,2)))
+    p = round(s*100/60 , 2)
+    y.write("\nPercentage : ")
+    y.write(str(p))
+    
+    y.write("\n*******************************************************************************")
+    
+y.close()
